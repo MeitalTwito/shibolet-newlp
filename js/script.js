@@ -73,3 +73,5 @@ allLinks.forEach(function (link) {
       headerEl.classList.toggle("nav-open");
   });
 });
+
+const formBtn = document.querySelector(".btn--form");
