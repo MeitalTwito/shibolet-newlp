@@ -276,12 +276,13 @@ body.light .logo {
   transition: all 0.5s;
 }
 
-.linkedin-link:active,
+.linkedin-link:link,
 .linkedin-link:visited {
   color: var(--main-text-color-light);
 }
 
-.linkedin-link:hover {
+.linkedin-link:hover,
+.linkedin-link:active {
   color: var(--main-color);
 }
 
