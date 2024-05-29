@@ -75,3 +75,55 @@ allLinks.forEach(function (link) {
 });
 
 const formBtn = document.querySelector(".btn--form");
+
+document.addEventListener("DOMContentLoaded", function () {
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  const elementsToObserve = document.querySelectorAll(
+    ".hidden, .hero-text-box, .img-box"
+  );
+  elementsToObserve.forEach((element) => {
+    observer.observe(element);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggleBtn = document.getElementById("theme-toggle");
+
+  // Check the saved theme in localStorage
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme) {
+    document.body.className = savedTheme;
+  } else {
+    // Set a default theme if none is saved
+    document.body.className = "dark";
+    localStorage.setItem("theme", "dark");
+  }
+
+  // Add event listener to the toggle button
+  themeToggleBtn.addEventListener("click", () => {
+    if (document.body.classList.contains("dark")) {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.body.classList.remove("light");
+      document.body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  });
+});
