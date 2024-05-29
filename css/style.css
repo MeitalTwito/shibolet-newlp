@@ -445,18 +445,37 @@ footer {
   grid-template-columns: 1fr 1fr;
 }
 
+address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+address ion-icon {
+  font-size: 1.6rem;
+}
+
 .footer-map {
   width: 100%;
 }
+
 /**************************/
 /* ANIMATIONS */
 /**************************/
 
-/**
- * ----------------------------------------
- * animation text-focus-in
- * ----------------------------------------
- */
 .text-focus-in {
   -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
