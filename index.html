@@ -9,6 +9,8 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
@@ -36,20 +38,30 @@
           </li>
         </menu>
       </nav>
-      <div class="buttons">
-        <button id="theme-toggle" class=" btn-theme-toggle"><ion-icon name="contrast-outline"></ion-icon></button>
-        <a class="main-nav-link btn-cta" href="#cta">register now</a>
-      </div>
       
+      <div class="buttons">
+       
+        <a class="main-nav-link btn-cta" href="#cta">register now</a>
+        <button id="theme-toggle" class=" btn-theme-toggle"><ion-icon name="contrast-outline"></ion-icon></button>
+        <button class="btn-mobile-nav">
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+
    </header>
    <main>
     <section class="section-hero">
         <div class="hero">
           <div class="hero-text-box text-focus-in">
-            <p><span class="event-tag">webinar</span></p>
+            <p><span class="event-tag">Conference</span></p>
             <h1 class="heading-primary">Open Source Digital marketing </h1>
             <h2 class="event-sub-heading">Theory meets life</h2>
-            <p class="event-description">Commercial engagements, due diligence, development phase, commercialization</p>
+            <div class="event-location">
+              <ion-icon name="location-outline"></ion-icon>
+              <span>Shibolet Offices. 4 Yitzhak Sadeh St. Building A.</span>
+            </div>
             <p class="event-date">27 MAY 2024 - Monday - 9:00-11:30 AM</p>
             <a class="btn btn-cta" href="#cta">register now</a>
           </div>
@@ -377,8 +389,38 @@
 
         </div>
         <iframe class="footer-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13524.573980855534!2d34.7849193!3d32.0653674!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4cb8e7f4b41f%3A0xd2035fed254ff39!2z16nXkdec16og15XXqdeV16onINei15XXqNeb15kg15PXmdef!5e0!3m2!1sen!2sil!4v1716900713519!5m2!1sen!2sil" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <a class="footer-btn" href="https://www.shibolet.com/en/landing_pages/newsletter/" target="_blank">stay tuned subscribe to our newsletter</a>
+
+        <ul class="social-links">
+          <li class="social-link">
+            <a href="https://www.linkedin.com/company/107846/admin/feed/posts/">
+              <ion-icon name="logo-linkedin"></ion-icon>
+              <span>linkedin</span>
+            </a>
+          </li>
+          <li class="social-link">
+            <a href="https://www.facebook.com/ShiboletLaw">
+              <ion-icon name="logo-facebook"></ion-icon>
+              <span>facebook</span>
+            </a>
+          </li>
+          <li class="social-link">
+            <a href="https://www.instagram.com/lifeatshibolet/">
+              <ion-icon name="logo-instagram"></ion-icon>
+              <span>instagram</span>
+            </a>
+          </li>
+          <li class="social-link">
+            <a href="https://www.youtube.com/channel/UC-5TPIK18HV_ODTWxIgj4YQ">
+              <ion-icon name="logo-youtube"></ion-icon>
+              <span>youtube</span>
+            </a>
+          </li>
+        </ul>
       </div>
-      </div>
+      
+    </div>
 
   </footer>
 

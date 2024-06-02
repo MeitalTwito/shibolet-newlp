@@ -174,6 +174,25 @@ body.dark .footer-logo {
   font-weight: 500;
 }
 
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--main-color);
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: inherit;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
 /* STICKY NAVIGATION */
 .sticky .header {
   position: fixed;
@@ -238,8 +257,12 @@ body.dark .footer-logo {
   color: var(--main-color);
 }
 
-.event-description {
+.event-location {
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .event-date {
@@ -443,6 +466,7 @@ footer {
 .info {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  row-gap: 4rem;
 }
 
 address {
@@ -470,6 +494,51 @@ address ion-icon {
 
 .footer-map {
   width: 100%;
+}
+
+.footer-btn:link,
+.footer-btn:visited {
+  grid-column: 1/-1;
+  background-color: var(--main-color);
+  border: var(--main-color) 1px solid;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.footer-btn:hover,
+.footer-btn:active {
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+.social-links {
+  list-style: none;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.social-link a:link,
+.social-link a:visited {
+  display: flex;
+  align-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  color: inherit;
+  transition: all 0.5s;
+}
+
+.social-link a:hover,
+.social-link a:active {
+  color: var(--main-color);
 }
 
 /**************************/
