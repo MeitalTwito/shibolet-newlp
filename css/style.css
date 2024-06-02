@@ -425,8 +425,12 @@ form input,
 form select {
   border: none;
   border-bottom: #000 1px solid;
-  border-radius: none;
+  border-radius: 0;
   padding: 0.75rem 0px;
+  box-shadow: none;
+  -webkit-appearance: none; /* Remove rounded corners in Safari and Chrome on iOS */
+  -moz-appearance: none; /* Remove rounded corners in Firefox on iOS */
+  appearance: none; /* Remove rounded corners in other browsers */
 }
 
 form h2,
@@ -455,7 +459,6 @@ form h2 {
   color: #000;
   cursor: pointer;
 }
-
 /**************************/
 /* footer */
 /**************************/
