@@ -748,7 +748,7 @@ address ion-icon {
 /**************************/
 @media (max-width: 44em) {
   .section-hero {
-    height: calc(85vh - 9.6rem - 15rem);
+    height: calc(90vh - 9.6rem - 15rem);
   }
   .event-location {
     font-size: 1.8rem;
