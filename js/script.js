@@ -89,7 +89,7 @@ btnNavEl.addEventListener("click", function () {
 });
 
 ///////////////////////////////////////////////////////////
-// Theme color
+// Theme colorח
 
 const formBtn = document.querySelector(".btn--form");
 
