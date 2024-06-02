@@ -1,0 +1,157 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+
+  .container,
+  .hero,
+  .header {
+    padding: 0 5rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+  .event-sub-heading {
+    font-size: 3.8rem;
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    color: inherit;
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: inherit;
+    z-index: 1000;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+    color: #fff;
+  }
+
+  .header-cta:link,
+  .main-nav-link:visited {
+    display: none;
+  }
+}
+/**************************/
+/* BELOW 830px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 52em) {
+  .speakers {
+    gap: 1rem;
+  }
+  .img-box {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+@media (max-width: 44em) {
+  .section-hero {
+    height: calc(90vh - 9.6rem - 15rem);
+  }
+  .event-location {
+    font-size: 1.8rem;
+  }
+  .event-date {
+    font-size: 2rem;
+  }
+  .logos img {
+    height: 2rem;
+  }
+  .speakers {
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .lecture-speakers {
+    flex-direction: column;
+  }
+  form,
+  .info {
+    grid-template-columns: 1fr;
+  }
+}
